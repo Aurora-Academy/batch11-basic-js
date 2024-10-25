@@ -88,3 +88,10 @@ myGender === "m"
   : myGender === "o"
   ? alert("You are Other")
   : alert("Wrong gender");
+
+// Write a js program to tell the part of the day using the time provided by user
+
+// Good Morning => 5 - 12
+// Good Afternoon => 12 - 3
+// Good Evening => 3 - 6
+// Good night => 6-11
