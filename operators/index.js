@@ -25,7 +25,9 @@ if (user != "raktim") {
   // String literals => Dynamic Variable Print
   // ES6
   alert(`Welcome ${user}`);
-  alert();
 } else {
   alert("Welcome admin");
 }
+
+// ES6
+user != "raktim" ? alert(`Welcome ${user}`) : alert("Welcome admin");
