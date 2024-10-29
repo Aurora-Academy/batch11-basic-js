@@ -54,3 +54,12 @@ const properCaseV2 = (text) =>
     .map((word) => word[0].toUpperCase().concat(word.substring(1, word.length)))
     .join(" ");
 console.log(properCaseV2("raktim kumar shrestha"));
+
+// Write a implicit js function that formats the number in following format.
+// Eg: 10000 => 10,000
+// Eg: 1000000 =>10,000,000
+
+const numberFormatter = (text, format = "en-IN") =>
+  Number(text).toLocaleString(format);
+
+console.log(numberFormatter(1000000));
