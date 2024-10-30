@@ -109,9 +109,30 @@ console.log(newProd);
 // Loop into new result and console it
 
 const car1 = { name: "Tesla", model: "Cybertruck", year: 2024 };
-const car2 = { name: "Tesla", model: "Cybertruck", year: 2024 };
+const car2 = { name: "Tesla", year: 2024, model: "Cybertruck" };
 
 // Write a js function to compare two objects for equality and return boolean result
 // console.log(areObjectsEqual(car1, car2)) // true, false
 
-// Immutable JS (Array)
+const areObjectsEqual = (obj1, obj2) => {
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
+  // check the length of object key
+  if (keys1.length !== keys2.length) {
+    return false;
+  }
+  // check the name of object key
+  const isMatchingKeys = keys1.every((key) => keys2.includes(key));
+  if (!isMatchingKeys) {
+    return false;
+  }
+  // compare the value of the object keys
+  for (let key of keys1) {
+    if (obj1[key] !== obj2[key]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+console.log(areObjectsEqual(car1, car2));
